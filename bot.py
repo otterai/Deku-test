@@ -1,4 +1,4 @@
-# +++ Made By Sanjiii [telegram username: @Urr_Sanjiii] +++
+# +++ Made By Gojo [telegram username: @DoraShin_hlo] +++
 
 from aiohttp import web
 from plugins import web_server
@@ -51,19 +51,19 @@ class Bot(Client):
             sys.exit()
 
         self.set_parse_mode(ParseMode.HTML)
-        self.LOGGER(__name__).info(f"ᴀᴅᴠᴀɴᴄᴇ ғɪʟᴇ-sʜᴀʀɪɴɢ ʙᴏᴛ ᴡɪᴛʜ ᴛᴏᴋᴇɴ ғᴇᴀᴛᴜʀᴇ V5 ᴍᴀᴅᴇ ʙʏ ➪ @Urr_Sanjiii [Tᴇʟᴇɢʀᴀᴍ Usᴇʀɴᴀᴍᴇ]")
+        self.LOGGER(__name__).info(f"ᴀᴅᴠᴀɴᴄᴇ ғɪʟᴇ-sʜᴀʀɪɴɢ ʙᴏᴛ V3 ᴍᴀᴅᴇ ʙʏ ➪ @DoraShin_hlo [Tᴇʟᴇɢʀᴀᴍ Usᴇʀɴᴀᴍᴇ]")
         self.LOGGER(__name__).info(f"{self.name} Bot Running..!")
-        self.LOGGER(__name__).info(f"ʜᴏsᴛᴇᴅ sᴜᴄᴇssғᴜʟʟʏ ʙᴀʙᴇʏʏʏ !! ✅")
+        self.LOGGER(__name__).info(f"OPERATION SUCCESSFULL ✅")
         #web-response
         app = web.AppRunner(await web_server())
         await app.setup()
         bind_address = "0.0.0.0"
         await web.TCPSite(app, bind_address, PORT).start()
 
-        try: await self.send_message(OWNER_ID, text = f"<b><blockquote>ʙᴏᴛ sᴜᴄᴇssғᴜʟʟʏ ʀᴇsᴛᴀʀᴛᴇᴅ ʙᴏss ✅\n\n» ᴍʏ ᴜɪ ɪs ᴍᴀᴅᴇ ʙʏ @urr_sanjiii\n\nᴄʟɪᴄᴋ ᴏɴ : /start ᴛᴏ ᴄʜᴇᴄᴋ ᴛʜᴇ ʙᴏᴛ...!!!</blockquote></b>")
+        try: await self.send_message(OWNER_ID, text = f"<b><blockquote>ʙᴏᴛ ʀᴇsᴛᴀʀᴛᴇᴅ sᴜᴄᴇssғᴜʟʟʏ ✅</blockquote></b>")
         except: pass
 
     async def stop(self, *args):
         await super().stop()
         self.LOGGER(__name__).info(f"{self.name} Bot stopped.")
-     
+        
