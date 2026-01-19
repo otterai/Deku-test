@@ -295,9 +295,10 @@ async def not_joined(client: Client, message: Message):
                 buttons.append([InlineKeyboardButton(text='»  ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ  «', url=link)])
 
 # 🔹 EXTRA FSUB-STYLE BUTTONS (BY DIRECT LINK)
-                    extra_links = await db.get_all_extra_fsub_links()
-                for x in extra_links:
-                     buttons.append([
+                    extra_links = await 
+				    db.get_all_extra_fsub_links()
+                    for x in extra_links:
+                        buttons.append([
                              InlineKeyboardButton(
                                              text='»  ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ  «',
                                              url=x["link"]
