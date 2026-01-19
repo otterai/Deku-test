@@ -295,17 +295,17 @@ async def not_joined(client: Client, message: Message):
                 buttons.append([InlineKeyboardButton(text='»  ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ  «', url=link)])
 
 # 🔹 EXTRA FSUB-STYLE BUTTONS (BY DIRECT LINK)
-                    extra_links = await 
-				    db.get_all_extra_fsub_links()
-                    for x in extra_links:
-                        buttons.append([
-                             InlineKeyboardButton(
-                                             text='»  ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ  «',
-                                             url=x["link"]
-                                                                        )
-                                                                            ])
-                      count += 1
-                      await temp.edit(f"<b>{'! ' * count}</b>")
+extra_links = await db.get_all_extra_fsub_links()
+
+for x in extra_links:
+    buttons.append([
+        InlineKeyboardButton(
+            text='»  ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ  «',
+            url=x["link"]
+        )
+    ])
+    count += 1
+    await temp.edit(f"<b>{'! ' * count}</b>")
 
         except Exception as e:
             print(f"Can't Export Channel Name and Link..., Please Check If the Bot is admin in the FORCE SUB CHANNELS:\nProvided Force sub Channel:- {chat_id}")
